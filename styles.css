@@ -32,19 +32,24 @@ main{
 
 .product-list-section{
     width: 70%;
-    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .product-list{
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 4px;
 }
 
 .product-card{
+    border: #555 solid 1px;
     background-color: #292929;
     border-radius: 6px;    
-    width: 210px;
+    box-sizing: content-box;
 }
 
 .product-card-content{
@@ -92,6 +97,63 @@ main{
     width: 16px;
 }
 
+.product-form-section{
+    text-align: center;
+    width: 30%;
+    padding: 0 8px;
+}
+
+.product-form{
+    background-color: #292929;
+    padding-top: 12px;
+    height: 200px;
+    border: none;
+    box-shadow: #faf310 3px 4px;
+    border-radius: 4px;
+}
+
+fieldset{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 8px;
+    border: none;
+}
+
+input{
+    width: 80%;
+    outline: none;
+}
+
+button{
+    font-family: "Pixelify Sans", sans-serif;
+    margin-top: 12px;
+    width: 70%;
+    padding: 4px;
+    border: none;
+    transition: box-shadow .2s;
+    font-weight: bold;
+}
+
+.add-button{
+    background-color: #222;
+    color: #faf310;
+}
+
+.add-button:hover{
+    box-shadow: #faf310 0px 1px 4px;
+}
+
+.clear-button{
+    background-color: #222;
+    color: white;
+}
+
+.clear-button:hover{
+    box-shadow: white 0px 1px 4px;
+}
+
 .footer{
     font-family: "Pixelify Sans", sans-serif;
     position: fixed;
@@ -101,11 +163,30 @@ main{
     background-color: #292929;
 }
 
-/* tablet (<764) */
+/* tablet / mobile (< 1024) */
 @media screen and (max-width: 1023px) {
     main{
-        display: block;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        justify-items: center
     }
+
+    .product-list-section{
+        width: 100%;
+        justify-content: center;
+    }
+
+    .product-list{
+        justify-content: center;
+        align-items: center;
+    }
+
+    .product-form-section{
+        text-align: center;
+        width: 70%;
+        padding: 0 8px;
+    }
+
 }
 
-/* mobile */
