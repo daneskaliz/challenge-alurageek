@@ -50,6 +50,8 @@ main{
     background-color: #292929;
     border-radius: 6px;    
     box-sizing: content-box;
+    width: 214px;
+    text-overflow: ellipsis;
 }
 
 .product-card-content{
@@ -68,6 +70,9 @@ main{
 
 .product-name{
     font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .product-price{
@@ -81,7 +86,7 @@ main{
     background-color: #292929;
     border: none;
     cursor: pointer;
-    width: 210px;
+    width: 200px;
     display: flex;
     justify-content: center;
     border-radius: 2px;
